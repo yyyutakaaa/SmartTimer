@@ -13,6 +13,7 @@ const createWindow = () => {
     minHeight: 640,
     backgroundColor: "#06080f",
     autoHideMenuBar: true,
+    icon: path.join(__dirname, "TimerLogo.ico"),
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,

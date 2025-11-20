@@ -24,12 +24,14 @@ npm start
 npm run package:win
 ```
 Output will land in `dist/SmartTimer-win32-x64/SmartTimer.exe`.
+The packaging script regenerates `TimerLogo.ico` from `TimerLogo.png` before building so the executable uses your custom icon.
 
 ## Project structure
 - `main.js` – Electron main process bootstrapping the window.
 - `preload.js` – Sandbox-friendly preload (currently minimal).
 - `index.html`, `styles.css`, `app.js` – UI and timer logic.
 - `package.json` – Scripts and Electron dependencies.
+- `TimerLogo.png` / `TimerLogo.ico` – App icon used for the window and packaged build.
 
 ## Usage notes
 - Keep the window open for the alarm sound to play.

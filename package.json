@@ -5,10 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package:win": "electron-packager . SmartTimer --platform=win32 --arch=x64 --overwrite --out=dist"
+    "build:icon": "node scripts/build-icon.js",
+    "package:win": "npm run build:icon && electron-packager . SmartTimer --platform=win32 --arch=x64 --overwrite --out=dist --icon=TimerLogo.ico"
   },
   "devDependencies": {
     "electron": "^28.2.0",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "png-to-ico": "^3.0.1"
   }
 }
